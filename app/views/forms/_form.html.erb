@@ -1,12 +1,17 @@
   <%= simple_form_for (form) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :phone %>
-  <%= f.input :prefecture %>
-  <%= f.input :address %>
-  <%= f.input :driver %>
-  <%= f.input :licences %>
-  <%= f.input :passport %>
-  <%= f.input :my_number %>
-  <%= f.input :observations %>
-  <%= f.submit %>
+  <div class="forms">
+    <%= f.input :name, label: "Nome Completo:" %>
+    <%= f.input :phone, label: "Telefone de Contato:" %>
+    <%= f.input :email, label: "Email:" %>
+    <%= f.input :prefecture, label: "Prefeitura:" %>
+    <%= f.input :address, label: "Endereço:" %>
+    <%= f.input :driver, label: "Carteira de Motorista:" %>
+    <%= f.input :licences, label: "Outras Licenças ou Carteiras:" %>
+    <%= f.input :passport, label: "Passaporte:" %>
+    <%= f.input :my_number, label: "My Number(se houver):" %>
+    <%= f.input :observations, label: "Outras observações(apto, mudança, etc...):" %>
+    <div class="text-center">
+      <%= f.submit "FINALIZAR", class:"btn btn-ghost" %>
+    </div>
+  </div>
   <% end %>
