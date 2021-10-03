@@ -1,1 +1,5 @@
-edit.html.erb
+<h1 class="text-center mt-3">EDIÇÃO DE CADASTRO</h1>
+<div class="text-center">
+  <%= link_to "VOLTAR", forms_path, class: "btn btn-ghost" %>
+</div>
+<%= render 'forms/form', form: @form %>

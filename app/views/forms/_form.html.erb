@@ -11,7 +11,7 @@
     <%= f.input :my_number, label: "My Number(se houver):" %>
     <%= f.input :observations, label: "Outras observações(apto, mudança, etc...):" %>
     <div class="text-center">
-      <%= f.submit "FINALIZAR", class:"btn btn-ghost" %>
+      <%= f.submit @form.persisted? ? "EDITAR" : "FINALIZAR", class:"btn btn-ghost" %>
     </div>
   </div>
   <% end %>
