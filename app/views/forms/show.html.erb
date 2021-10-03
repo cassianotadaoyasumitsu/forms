@@ -1,1 +1,20 @@
-show.html.erb
+<div class="card mt-3">
+  <h3 class="text-center m-3"><%= @form.name %></h3>
+  <label>Telefone:</label>
+  <p class="card-body"><%= @form.phone %></p>
+  <label>Endereço:</label>
+  <p class="card-body"><%= @form.prefecture %></p>
+  <p class="card-body"><%= @form.address %></p>
+  <label>Email:</label>
+  <p class="card-body"><%= @form.email %></p>
+  <label>Habilitação:</label>
+  <p class="card-body"><%= @form.driver ? "Possui Carteira de Motorista" : "Não possui Carteira de Motorista" %></p>
+  <label>Outras habilitações:</label>
+  <p class="card-body"><%= @form.licences %></p>
+  <label>Passaporte:</label>
+  <p class="card-body"><%= @form.passport %></p>
+  <label>My Number:</label>
+  <p class="card-body"><%= @form.my_number %></p>
+  <label>Observações:</label>
+  <p class="card-body"><%= @form.observations %></p>
+</div>
