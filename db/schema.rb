@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2021_10_01_102254) do
     t.text "licences"
     t.string "passport"
     t.string "my_number"
+    t.text "previous_job"
+    t.text "job_kind"
     t.text "observations"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
