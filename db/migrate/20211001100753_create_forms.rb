@@ -10,6 +10,8 @@ class CreateForms < ActiveRecord::Migration[6.0]
       t.text :licences
       t.string :passport
       t.string :my_number
+      t.text :previous_job
+      t.text :job_kind
       t.text :observations
 
       t.timestamps
