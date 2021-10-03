@@ -5,9 +5,9 @@
     <p><%= form.phone %></p>
   </div>
   <div class="card-body d-flex justify-content-between">
-    <%= link_to 'Visualizar', form_path(form), class: 'btn btn-success btn-sm' %>
-    <%= link_to 'Editar', edit_form_path(form), class: 'btn btn-secondary btn-sm' %>
-    <%= link_to 'Apagar', form_path(form), class: 'btn btn-danger btn-sm', method: :delete, data: { confirm: 'Gostaria de apagar esse cadastro?' } %>
+    <%= link_to 'Visualizar', form_path(form), class: 'btn btn-ghost btn-sm' %>
+    <%= link_to 'Editar', edit_form_path(form), class: 'btn btn-ghost btn-sm' %>
+    <%= link_to 'Apagar', form_path(form), class: 'btn btn-ghost btn-sm', method: :delete, data: { confirm: 'Gostaria de apagar esse cadastro?' } %>
   </div>
 </div>
 <% end %>
