@@ -57,7 +57,9 @@ class FormsController < ApplicationController
         :licences,
         :passport,
         :my_number,
-        :observations
+        :observations,
+        :previous_job,
+        :job_kind
       )
   end
 end
