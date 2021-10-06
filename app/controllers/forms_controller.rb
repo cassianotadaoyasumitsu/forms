@@ -29,7 +29,7 @@ class FormsController < ApplicationController
   def update
     @form = Form.find(params[:id])
     if @form.update(form_params)
-      if @user.admin
+      if current_user.admin
         redirect_to form_path(params[:id])
       else
         redirect_to root_path
