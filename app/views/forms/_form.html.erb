@@ -13,7 +13,36 @@
     <%= f.input :job_kind, label: "Que tipo de trabalho você está procurando:" %>
     <%= f.input :observations, label: "Outras observações(apto, mudança, etc...):" %>
     <div class="text-center">
-      <%= f.submit @form.persisted? ? "EDITAR" : "FINALIZAR", class:"btn btn-ghost" %>
+      <% if @form.persisted? %>
+      <%= f.submit "EDITAR", class:"btn btn-ghost" %>
+      <% else %>
+      <button type="button" class="btn btn-ghost add-btn" data-toggle="modal" data-target="#exampleModal">
+        CADASTRAR
+      </button>
+      <% end %>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Termo de Conconrdancia</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Concordo em disponibilizar meus dados para futuro
+            contato, no que diz respeito a oportunidade de trabalho.
+            Me reponsabilizo pela veracidade das informações fornecidas.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-ghost" data-dismiss="modal">FECHAR</button>
+            <%= f.submit "CADASTRAR", class:"btn btn-ghost" %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <% end %>
